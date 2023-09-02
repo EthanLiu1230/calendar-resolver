@@ -1,11 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo app for testing an idea,
+an idea to resolve timeline conflict between team and personal schedule 
+while providing flexibility for the person to switch team.
 
-Things you may want to cover:
-
-* Ruby version
+* ruby 3.2.2
 
 * System dependencies
 

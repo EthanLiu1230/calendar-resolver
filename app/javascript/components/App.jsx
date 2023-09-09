@@ -11,6 +11,7 @@ function DraggableEvent ({
   },
   children,
 }) {
+  // todo useRef
   const eventId = `event-${id}`;
   useEffect(() => {
     new Draggable(document.querySelector(`#${eventId}`), { eventData: event });

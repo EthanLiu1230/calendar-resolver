@@ -1,42 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FullCalendar from '@fullcalendar/react';
-import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-
-function DraggableEvent ({
-  id,
-  event = {
-    title: 'my event', duration: '48:00',
-  },
-  children,
-}) {
-  // todo useRef
-  const eventId = `event-${id}`;
-  useEffect(() => {
-    new Draggable(document.querySelector(`#${eventId}`), { eventData: event });
-  }, []);
-  return (<div id={eventId} className="draggable-el">{children}</div>);
-}
-
-function ExternalEventBox ({ children }) {
-  return (
-    <div className="bg-blue-500 text-white rounded">{children}</div>
-  );
-}
+import DraggableEvent from './DraggableEvent';
 
 function App () {
-
   return (
     <main className={'container'}>
-      <DraggableEvent id={'fifa'} event={{
+      <DraggableEvent className={'bg-blue-600 text-white rounded'} event={{
         title: 'FIFA',
         duration: '72:00',
-      }}><ExternalEventBox>FIFA</ExternalEventBox></DraggableEvent>
+      }}>FIFA</DraggableEvent>
 
       <DraggableEvent id={'world_cup'}
-                      event={{ title: 'World Cup', duration: '49:00' }}><ExternalEventBox>World
-        Cup</ExternalEventBox></DraggableEvent>
+                      className={'bg-blue-600 text-white rounded'}
+                      event={{ title: 'World Cup', duration: '49:00' }}>World
+        Cup</DraggableEvent>
 
       <div className="calendar-container">
         <FullCalendar

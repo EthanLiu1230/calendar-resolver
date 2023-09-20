@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Draggable } from '@fullcalendar/interaction';
 
-function DraggableEvent ({
+function DraggableItem ({
   event = {
     title: 'my event', duration: '48:00',
   },
@@ -15,4 +15,4 @@ function DraggableEvent ({
   return (<div ref={ref} {...rest}>{children}</div>);
 }
 
-export default DraggableEvent;
+export default DraggableItem;

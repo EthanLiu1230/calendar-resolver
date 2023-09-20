@@ -3,20 +3,20 @@ import FullCalendar from '@fullcalendar/react';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import DraggableEvent from './DraggableEvent';
+import DraggableItem from './DraggableItem';
 
 function App () {
   return (
     <main className={'container'}>
-      <DraggableEvent className={'bg-blue-600 text-white rounded'} event={{
+      <DraggableItem className={'bg-blue-600 text-white rounded'} event={{
         title: 'FIFA',
         duration: '72:00',
-      }}>FIFA</DraggableEvent>
+      }}>FIFA</DraggableItem>
 
-      <DraggableEvent id={'world_cup'}
-                      className={'bg-blue-600 text-white rounded'}
-                      event={{ title: 'World Cup', duration: '49:00' }}>World
-        Cup</DraggableEvent>
+      <DraggableItem id={'world_cup'}
+                     className={'bg-blue-600 text-white rounded'}
+                     event={{ title: 'World Cup', duration: '49:00' }}>World
+        Cup</DraggableItem>
 
       <div className="calendar-container">
         <FullCalendar
